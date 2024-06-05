@@ -13,6 +13,7 @@ Persist data related to book reviews and comments on the book reviews in a MySQL
         - /logout, which deletes the user's auth token both from the server and from their cookies.
     - do not store passwords in plain text! Use a library such as https://www.npmjs.com/package/bcryptLinks to an external site. to perform a one-way hash of your passwords.
 
+
     User Actions
 - write REST Endpoints that allow users to do the following:
     - Post a review for a book, consisting of a rating and some text commenting on the book. A user can only post a review if the book exists in the service from BookAPI, the user is logged in, and the user has not already written a review for the book.
