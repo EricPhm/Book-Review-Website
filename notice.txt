@@ -1,0 +1,74 @@
+// promise is an object - contain both 
+    - producing code (code that can take some time) 
+    - consuming code (code that must wait for the result)
+// async - async before a function makes the function return a promise
+// await - wait for the promise to complete before move on to the next line of code
+//The fetch() method starts the process of fetching a resource from a server. 
+    - returns a Promise that resolves to a Response object.
+
+// params - req.params is an object containing route parameters. So must do this
+    - const comment_id = req.params.comment_id
+    - const { comment_id } = req.params
+
+--Install Express Generator:
+    Open your terminal or command prompt and run the following npm command to install Express Generator 
+    globally on your system:
+    npm install -g express-generator
+    This command will install the Express application generator globally, allowing you to use it from any directory.
+
+
+--Create an Express Application:
+    After installing Express Generator, you can use it to create a new Express application. 
+    Navigate to the directory where you want to create your project in the terminal, run the following command:
+    - do this in command prompt 
+        express my-express-app
+    Replace my-express-app with the name you want to give to your Express application. 
+    This command will create a new directory named my-express-app and generate the basic structure of an Express application inside it.
+
+
+--Navigate to the Project Directory:
+    After creating the Express application, navigate to the project directory using the cd command:
+        cd my-express-app
+
+
+--Install Dependencies:
+    project directory, you need to install the project dependencies specified in the package.json file. 
+    This command will install all the necessary dependencies required by the Express application.
+        npm install
+
+--Run the Application:
+    This command will start the server, and you should see a message indicating that the server is running on a 
+    specific port (usually port 3000 by default). 
+    You can then open a web browser and navigate to http://localhost:3000 to view your Express application.
+    After installing the dependencies, you can start the Express application by running the following command:
+        npm start
+
+-- add my sql
+    npm install mysql2
+
+-- add devDependencies in json package.json
+    npm install --save node-dev
+
+--install dotenv so that it can run the application
+    npm i dotenv
+
+
+== create own user and password
+== it perform a one-way hash of your passwords.
+--install bcrypt to encrypt the password
+    npm install bcrypt
+
+== install this to automatically refresh server after edit without crashing and reopen
+--install nodemon 
+    npm i --save-dev nodemon
+    "scripts": {
+        "devStart": "nodemon app.js",
+        "start": "node ./bin/www"
+    },
+
+
+== use UUID to generate random 128-bit unique identifier for token 
+-- use this token in cookie for auth token
+    npm install uuid
+// import to code
+    const { v4: uuidv4 } = require('uuid');
